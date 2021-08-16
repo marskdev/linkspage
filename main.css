@@ -1,3 +1,23 @@
+:root {
+    --darkest-base: #202231;
+    --dark-base: #282A3E;
+    --base: #2B2D42;
+    --light-base: #30334A;
+    --lightest-base: #34364C;
+     /* Print */
+    --dark-slate: #4f5067;
+    --slate: #A8A8C7;
+    --light-slate: #C7C7DB;
+    --lightest-slate: #E6E6EF;
+    /* Branding */
+    --primary: #F6BE5F;
+    --secondary: #FA9875;
+    --gradient: linear-gradient(109.8deg, var(--primary) -6.35%, var(--secondary) 105.29%);
+    --border-radius: .8rem;
+    --dark-box-shadown: 0px 14px 25px -5px rgba($darkest-base, 0.7);
+    --light-box-shadown: 0px 1px 20px 0px rgba($primary, 1);
+}
+
 body {
     --primary: 25,91,255;
     --color: 44, 62, 80;
@@ -5,10 +25,10 @@ body {
     align-items: flex-start;
     justify-content: center;
     height: 100vh;
-    background: #f4f7f8;
+    background: var(--dark-base);
     height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
-    color: rgb(var(--color));
+    color: var(--lightest-slate);
 }
 * {
     list-style: none;
@@ -34,7 +54,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #fff;
+    background: var(--base);
     padding-bottom: 10px;
     border-radius: 0px 0px 40px 0px;
 }
@@ -52,7 +72,7 @@ body {
     padding: 6px 10px;
 }
 .con-user .title p a {
-    color: rgb(var(--text));
+    color: var(--light-slate);
 }
 .avatar img {
     width: 80px;
@@ -68,25 +88,32 @@ body {
     width: 100%;
     position: relative;
     z-index: 10;
-    box-shadow: 0px 15px 20px -5px rgba(0,0,0,.08);
+    box-shadow: var(--dark-box-shadown);
     border-radius: 0px 0px 30px 30px;
 }
 .con-menu button {
+    cursor: pointer;
     padding: 12px;
     width: calc(50% - 4px);
     border: 0px;
     background: transparent;
     font-weight: bold;
-    color: rgb(var(--text));
+    color: var(--slate);
     font-size: 1rem;
     transition: all .25s ease;
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
+    box-shadow: var(--dark-box-shadown);
     border-radius: 16px;
     z-index: 2;
 }
+.con-menu button:hover {
+    transition: background .5s, color .5s;
+    background: var(--lightest-base);
+    color: var(--lightest-slate);
+}
 .con-menu button.active {
-    background: #fff;
-    box-shadow: 0px 5px 25px 0px rgba(0,0,0,.06);
+    color: var(--lightest-slate);
+    background: var(--lightest-base);
+    box-shadow: var(--dark-box-shadown);
     /* color: rgb(var(--primary)); */
 }
 .con-contents {
@@ -117,9 +144,9 @@ body {
     display: block;
     margin: 20px;
     position: relative;
-    color: rgb(var(--text));
+    color: var(--light-slate);
     border-radius: 30px;
-    box-shadow: 0px 5px 30px 0px rgba(0,0,0,.08);
+    box-shadow: var(--dark-box-shadown);
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -162,7 +189,7 @@ body {
     bottom: 0px;
     height: 150px;
     width: 100%;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 30%, rgba(0,0,0,0.001) 100%);
+    background: linear-gradient(0deg, rgba(32,34,49, 1) 30%, rgba(0,0,0,0.001) 100%);
 
 }
 .con-links {
@@ -188,7 +215,7 @@ body {
     text-decoration: none;
     font-size: 1rem;
     /* color: #fff; */
-    color: rgb(var(--color));
+    color: var(--light-slate);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,7 +225,7 @@ body {
     border-radius: 25px;
     position: relative;
     /* border: 2px solid rgb(var(--color)); */
-    background: #fff;
+    background: var(--lightest-base);
     /* box-shadow: 0px 10px 30px 0px rgba(var(--primary), .15); */
 }
 .con-links a:after {
@@ -207,7 +234,6 @@ body {
     top: 0px;
     width: 61px;
     height: 61px;
-    background: rgb(var(--color));;
     position: absolute;
     border-radius: 25px;
 }
@@ -232,7 +258,7 @@ body {
     position: absolute;
     left: 18px;
     z-index: 10;
-    color: #fff;
+    color: var(--lightest-slate);
 }
 .con-links a span {
     text-align: center;

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luisdanielroviracontreras - instagram - github - twitter</title>
+    <link rel="shortcut icon" href="https://marskdev.github.io/static/images/favicons/favicon.ico" type="image/x-icon">
+    <title>Marskdev - Links page</title>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
@@ -12,7 +13,7 @@
     <div class="content">
         <div class="con-user">
             <div class="avatar">
-                <img src="https://s.gravatar.com/avatar/7fa2b96ca41cb2e609a18f009dbc1607?s=160" alt="">
+                <img src="https://s.gravatar.com/avatar/7fa2b96ca41cb2e609a18f009dbc1607?s=500" alt="">
             </div>
             <div class="title">
                 <h1>
@@ -28,21 +29,15 @@
                 Links
             </button>
             <button onclick="handleClick(event, 'con-posts')">
-                Posts
+                Contenido reciente
             </button>
         </div>
         <div class="con-contents">
             <div class="con-links">
-                <a target="_blank" href="https://marskdev.netlify.app">
+                <a target="_blank" href="https://marskdev.github.io/">
                     <i class='bx bxs-book'></i>
                     <span>
                         Portafolio
-                    </span>
-                </a>
-                <a target="_blank" href="https://www.linkedin.com/in/marskdev">
-                    <i class='bx bxl-linkedin'></i>
-                    <span>
-                        Linkedin
                     </span>
                 </a>
                 <a target="_blank" href="https://www.instagram.com/marskdev">
@@ -51,22 +46,22 @@
                         Instagram
                     </span>
                 </a>
-                <a target="_blank" href="https://github.com/marskdev">
-                    <i class='bx bxl-github'></i>
-                    <span>
-                        Github
-                    </span>
-                </a>
-                <a target="_blank" href="https://codepen.io/marskdev">
-                    <i class='bx bxl-codepen' ></i>
-                    <span>
-                        Codepen
-                    </span>
-                </a>
                 <a target="_blank" href="https://twitter.com/marskdev">
                     <i class='bx bxl-twitter' ></i>
                     <span>
                         Twitter
+                    </span>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/marskdev">
+                    <i class='bx bxl-linkedin'></i>
+                    <span>
+                        Linkedin
+                    </span>
+                </a>
+                <a target="_blank" href="https://github.com/marskdev">
+                    <i class='bx bxl-github'></i>
+                    <span>
+                        Github
                     </span>
                 </a>
                 <a target="_blank" href="https://www.behance.net/marskdev">
@@ -75,12 +70,24 @@
                         Behance
                     </span>
                 </a>
+                <a target="_blank" href="https://dev.to/marskdev">
+                    <i class='bx bxl-dev-to' ></i>
+                    <span>
+                        Dev
+                    </span>
+                </a>
+                <a target="_blank" href="https://codepen.io/marskdev">
+                    <i class='bx bxl-codepen' ></i>
+                    <span>
+                        Codepen
+                    </span>
+                </a>
             </div>
 
             <div class="con-posts">
                 <a class="post" target="_blank" href="https://www.instagram.com/p/CFVJcvtCDiu/">
                     <div class="con-file">
-                        <img src="5loading.png" alt="">
+                        <img src="https://luisdanielroviracontreras.github.io/5loading.png" alt="">
                     </div>
 
                     <footer>
@@ -90,23 +97,6 @@
                         </h3>
                         <p>
                             How to create 6 hover buttons
-                        </p>
-                    </footer>
-
-                    <div class="effect"></div>
-                </a>
-                <a class="post" target="_blank" href="https://www.instagram.com/p/CEkG1ZJCd4f/">
-                    <div class="con-file">
-                        <img src="switch.png" alt="">
-                    </div>
-
-                    <footer>
-                        <h3>
-                            <i class='bx bxl-instagram-alt'></i>
-                            Instagram
-                        </h3>
-                        <p>
-                            How to create Simple Switch Element
                         </p>
                     </footer>
 
@@ -150,15 +140,15 @@
         if (evt.target.scrollLeft > window.innerWidth / 2 && evt.target.scrollLeft < window.innerWidth + (window.innerWidth / 2)) {
             menu.querySelector('button:nth-child(1)').classList.remove('active')
             menu.querySelector('button:nth-child(2)').classList.add('active')
-            menu.querySelector('button:nth-child(3)').classList.remove('active')
+            //menu.querySelector('button:nth-child(3)').classList.remove('active')
         } else if (evt.target.scrollLeft < window.innerWidth / 2) {
             menu.querySelector('button:nth-child(1)').classList.add('active')
             menu.querySelector('button:nth-child(2)').classList.remove('active')
-            menu.querySelector('button:nth-child(3)').classList.remove('active')
-        } else if (evt.target.scrollLeft > window.innerWidth + (window.innerWidth / 2)) {
+            //menu.querySelector('button:nth-child(3)').classList.remove('active')
+        } /*else if (evt.target.scrollLeft > window.innerWidth + (window.innerWidth / 2)) {
             menu.querySelector('button:nth-child(2)').classList.remove('active')
             menu.querySelector('button:nth-child(3)').classList.add('active')
-        }
+        }*/
     })
     </script>
 </html>
