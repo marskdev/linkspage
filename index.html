@@ -19,9 +19,6 @@
                 <h1>
                     @marskdev
                 </h1>
-                <p>
-                    Frontend developer <br> Diseñador UX/UI
-                </p>
             </div>
         </div>
         <div class="con-menu">
@@ -101,6 +98,14 @@
                     </footer>
 
                     <div class="effect"></div>
+                </a>
+                <a class="blog-post" target="_blank" href="https://sample.com">
+                    <header>
+                        <h3><i class="bx bxl-dev-to"></i>Dev post</h3>
+                    </header>
+                    <footer>
+                        <p>Buenas practicas en CSS</p><span>6 min read</span>
+                    </footer>
                 </a> -->
                 <div class="con-noyet">
                     <div class="con-draw">
@@ -147,15 +152,15 @@
         if (evt.target.scrollLeft > window.innerWidth / 2 && evt.target.scrollLeft < window.innerWidth + (window.innerWidth / 2)) {
             menu.querySelector('button:nth-child(1)').classList.remove('active')
             menu.querySelector('button:nth-child(2)').classList.add('active')
-            //menu.querySelector('button:nth-child(3)').classList.remove('active')
+            menu.querySelector('button:nth-child(3)').classList.remove('active')
         } else if (evt.target.scrollLeft < window.innerWidth / 2) {
             menu.querySelector('button:nth-child(1)').classList.add('active')
             menu.querySelector('button:nth-child(2)').classList.remove('active')
-            //menu.querySelector('button:nth-child(3)').classList.remove('active')
-        } /*else if (evt.target.scrollLeft > window.innerWidth + (window.innerWidth / 2)) {
+            menu.querySelector('button:nth-child(3)').classList.remove('active')
+        } else if (evt.target.scrollLeft > window.innerWidth + (window.innerWidth / 2)) {
             menu.querySelector('button:nth-child(2)').classList.remove('active')
             menu.querySelector('button:nth-child(3)').classList.add('active')
-        }*/
+        }
     })
     </script>
 </html>

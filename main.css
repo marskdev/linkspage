@@ -11,11 +11,7 @@
     --lightest-slate: #E6E6EF;
     /* Branding */
     --brand: #F6BE5F;
-    --secondary: #FA9875;
-    --gradient: linear-gradient(109.8deg, var(--brand) -6.35%, var(--secondary) 105.29%);
-    --border-radius: .8rem;
     --dark-box-shadown: 0px 14px 25px -10px rgba(32,34,49, 0.5);
-    --light-box-shadown: 0px 1px 20px 0px rgba($primary, 1);
 }
 
 body {
@@ -47,7 +43,7 @@ body {
     overflow: hidden;
 }
 .con-user {
-    padding-top: 10px;
+    padding-top: 35px;
     width: 100%;
     position: relative;
     display: flex;
@@ -65,14 +61,6 @@ body {
 .con-user .title h1 {
     font-size: 1.1rem;
     padding: 0px 0px;
-}
-.con-user .title p {
-    font-size: .9rem;
-    opacity: .6;
-    padding: 6px 10px;
-}
-.con-user .title p a {
-    color: var(--light-slate);
 }
 .avatar img {
     width: 80px;
@@ -151,6 +139,41 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.con-posts .blog-post {
+    position: relative;
+    text-decoration: none;
+    padding:15px 25px;
+    background: var(--lightest-base);
+    width: calc(100% - 40px);
+    display: block;
+    margin: 20px;
+    color: var(--light-slate);
+    border-radius: 30px;
+    box-shadow: var(--dark-box-shadown);
+}
+@media screen and (min-width: 1024px) {
+    .con-posts .blog-post footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.con-posts .blog-post footer span:last-child {
+    color: var(--slate);
+    font-size: 12px;
+}
+.con-posts .blog-post header h3 {
+    display: flex;
+    align-items: center;
+}
+.con-posts .blog-post header h3 i {
+    margin-right: 5px;
+    font-size: 1.4rem;
+}
+.con-posts  p {
+    color: var(--lightest-slate);
+}
+
 .con-file {
     width: 100%;
     padding-bottom: 100%;
@@ -291,7 +314,8 @@ body {
 /* Custom Scrollbar */
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
+    display: none;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
@@ -299,4 +323,9 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--lightest-base); 
+}
+@media screen and (min-width: 1024px) {
+    ::-webkit-scrollbar {
+        display: block;
+    }
 }
